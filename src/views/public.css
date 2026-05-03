@@ -1,0 +1,24 @@
+.componentePublic{
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.componentePublic h2{
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+.gridPublicProductos{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:15px
+}
+@media (max-width: 1024px) {
+ .gridPublicProductos{
+    grid-template-columns: repeat(3,1fr);
+ }    
+}
+@media (max-width: 600px){
+    .gridPublicProductos{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

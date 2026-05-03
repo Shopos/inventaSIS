@@ -1,0 +1,111 @@
+.modalAdminAdd-Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalAdmin-Container {
+  background: white;
+  width: 50%;
+  max-height: 80vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.modalAdmin-Container h2{
+    justify-content: center;
+    display: flex;
+
+}
+
+.modalAdmin-body {
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.grupoInput{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.grupoInput input{
+    width: 60%;
+    box-sizing: border-box;
+}
+.grupoInput select{
+  width: 60%;
+  box-sizing: border-box;
+  padding: 4px;
+}
+.grupoInput label{
+    width: 40%;
+    text-align: left;
+    margin: 0;
+}
+.modalAdmin-foot {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.modalAdmin-foot button{
+    color: white;
+    background-color: olive;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.modalAdmin-foot button:hover{
+    background-color: rgb(138, 138, 74);
+    color: black;
+}
+
+
+.previewImagen-galeria {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.imagenContainer {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f0f0f0;
+}
+
+.imagenContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.btn-delete-img {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255,0,0,0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 12px;
+  cursor: pointer;
+}

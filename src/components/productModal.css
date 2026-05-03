@@ -1,0 +1,172 @@
+.overlayPM{
+    position: fixed;          /* se queda fijo en pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5); /* fondo oscuro */
+
+    display: flex;
+    justify-content: center;  /* centrar horizontal */
+    align-items: center;      /* centrar vertical */
+    text-transform: capitalize;
+    z-index: 1000; 
+}
+.modalPM{
+    background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+
+  width: 300px;
+  max-width: 90%;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: normal;
+}
+.modalPM button{
+    background-color: darkolivegreen;
+  color: white;
+  border-radius: 5px;
+  border-color: white;
+  padding: 5px; 
+}
+
+.precioContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* precio tachado */
+.precioOriginal {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 14px;
+}
+
+/* precio destacado */
+.precioDescuento {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* precio normal (sin descuento) */
+.precioNormal {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.galeria-admin-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Visor Principal */
+.main-image-viewer {
+  width: 100%;
+  height: 250px; /* Altura fija para consistencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.main-image-viewer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Muestra la imagen completa sin recortar */
+  transition: opacity 0.3s ease;
+}
+
+/* Contenedor de Miniaturas */
+.miniaturas-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto; /* Scroll horizontal si hay muchas imágenes */
+  padding-bottom: 5px;
+  scrollbar-width: thin; /* Para Firefox */
+}
+
+/* Estilo de cada Miniatura */
+.miniatura-item {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0; /* Evita que se aplasten */
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  background: #eee;
+}
+
+.miniatura-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Las miniaturas sí se recortan para llenar el cuadro */
+}
+
+/* Estado Activo de la Miniatura */
+.miniatura-item.active {
+  border-color: darkolivegreen; /* Color que combine con tu botón */
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.miniatura-item:hover {
+  opacity: 0.8;
+}
+
+/* Estilo para cuando no hay fotos */
+.no-image {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* --- Ajustes adicionales al Modal para mejorar la elegancia --- */
+
+.modalPM {
+  /* Aumentamos un poco el ancho para la galería */
+  width: 350px; 
+  max-width: 95%;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modalPM h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.modalPM p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.precioContainer {
+  margin-top: 10px;
+  padding: 10px 0;
+}
