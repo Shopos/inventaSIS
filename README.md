@@ -30,6 +30,16 @@ Este proyecto es una plataforma Fullstack para la administración de inventario 
    
 >[!TIP]
    Las variables deben llevar el prefijo `VITE_`, esto último debido a que se utiliza **VITE+TypeScript**.
+>
+#### Configuración de Acceso Administrativo
+El sistema utiliza **Firebase Auth** para gestionar la identidad de los usuarios. Para restringir quién puede entrar al panel de administración:
+
+1. Ve a tu consola de Firebase y crea un usuario en la sección de **Authentication**.
+2. Copia el correo electrónico de ese usuario.
+3. Declara la siguiente variable en tu archivo `.env`:
+```env
+VITE_SPECIAL_MAIL_ACCESS="correo@ejemplo.com"
+```
 
 >4.Ejecutar el proyecto
 >
