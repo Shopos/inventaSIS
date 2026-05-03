@@ -25,8 +25,10 @@ Este proyecto es una plataforma Fullstack para la administración de inventario 
 ```
 3. Configura las variables de entorno
    En este caso al estar usando Firebase y Supabase se deben cambiar las variables de estas herramientas creando un archivo .env
-   [!TIP]
+   
+>[!TIP]
    Las variables deben llevar el prefijo `VITE_`, esto último debido a que se utiliza **VITE+TYPESCRIPT**
+
 
 4.Ejecutar el proyecto
   Una vez configurada tanto las credenciales e instalado las dependencias ejecuta
