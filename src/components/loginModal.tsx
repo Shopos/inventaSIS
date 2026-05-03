@@ -6,7 +6,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 function LoginModal({ onSuccess }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-  const mail = "admin-inventario@inventasis.com";
+  const mail = import.meta.env.VITE_SPECIAL_MAIL_ACCESS;
 
   const handleLogin = async () => {
     try {
