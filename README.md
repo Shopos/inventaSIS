@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# 🛒 Sistema de Gestión de Productos (Admin & Store)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una plataforma Fullstack para la administración de inventario y visualización de productos, integrando **Firebase** para la base de datos y **Supabase** para el almacenamiento de imágenes.
 
-Currently, two official plugins are available:
+## 🚀 Características
+- **Panel de Administración:** CRUD completo (Crear, Leer, Actualizar, Eliminar) de productos.
+- **Galería de Imágenes:** Carrusel interactivo y visor de miniaturas optimizado.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tecnologías utilizadas
+- **Frontend:** React + TypeScript.
+- **Estilos:** CSS3.
+- **Base de Datos:** Google Firebase (Firestore).
+- **Almacenamiento de Imágenes:** Supabase Storage.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚙️ Instalación y Configuración
 
-## Expanding the ESLint configuration
+>1. Clonar el repositorio:
+>   
+>Clona el repositorio dentro de tu dispositivo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+>2. Instalar dependencias
+```bash
+    npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+>3. Configura las variables de entorno
+>
+>En este caso al estar usando Firebase y Supabase se deben cambiar las variables de estas herramientas creando un archivo .env
+   
+>[!TIP]
+   Las variables deben llevar el prefijo `VITE_`, esto último debido a que se utiliza **VITE+TypeScript**.
+>
+#### Configuración de Acceso Administrativo
+El sistema utiliza **Firebase Auth** para gestionar la identidad de los usuarios. Para restringir quién puede entrar al panel de administración:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Ve a tu consola de Firebase y crea un usuario en la sección de **Authentication**.
+2. Copia el correo electrónico de ese usuario.
+3. Declara la siguiente variable en tu archivo `.env`:
+```env
+VITE_SPECIAL_MAIL_ACCESS="correo@ejemplo.com"
 ```
+
+>4.Ejecutar el proyecto
+>
+>Una vez configurada tanto las credenciales e instalado las dependencias.
+  ```bash
+      npm run dev
+  ```
+   
