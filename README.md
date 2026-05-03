@@ -15,23 +15,25 @@ Este proyecto es una plataforma Fullstack para la administración de inventario 
 
 ## ⚙️ Instalación y Configuración
 
-1. Clonar el repositorio:
-   ```bash
-   git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
-```
-2. Instalar dependencias
+>1. Clonar el repositorio:
+>   
+>Clona el repositorio dentro de tu dispositivo
+
+>2. Instalar dependencias
 ```bash
     npm install
 ```
-3. Configura las variables de entorno
-   En este caso al estar usando Firebase y Supabase se deben cambiar las variables de estas herramientas creando un archivo .env
+
+>3. Configura las variables de entorno
+>
+>En este caso al estar usando Firebase y Supabase se deben cambiar las variables de estas herramientas creando un archivo .env
    
 >[!TIP]
-   Las variables deben llevar el prefijo `VITE_`, esto último debido a que se utiliza **VITE+TYPESCRIPT**
+   Las variables deben llevar el prefijo `VITE_`, esto último debido a que se utiliza **VITE+TypeScript**.
 
-
-4.Ejecutar el proyecto
-  Una vez configurada tanto las credenciales e instalado las dependencias ejecuta
+>4.Ejecutar el proyecto
+>
+>Una vez configurada tanto las credenciales e instalado las dependencias.
   ```bash
       npm run dev
   ```
